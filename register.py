@@ -12,11 +12,11 @@ def get_pwd():
     return pres_dir
     
 def int_or_not(value):
-    try:
-    	int(value)
-    	return True
-    except ValueError:
-    	return False
+    #Avoid using exceptions for conditional statements
+    if(isinstance(value,int)):
+        return true
+    else:
+        return false
 
 def get_list(dir_path):
     if path.exists('st_dict.json'):
@@ -62,8 +62,6 @@ def run_next(khata,dir_path):
                 subprocess.run(cmnd,shell=True,capture_output=True)
             break
     first_screen(khata,dir_path)
-
-
 
 def run_this_one(khata,dir_path,serial_no):
     i = 0
