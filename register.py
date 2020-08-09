@@ -12,6 +12,7 @@ def get_pwd():
     return pres_dir
     
 def int_or_not(value):
+    #please do not use try catch here
     try:
     	int(value)
     	return True
